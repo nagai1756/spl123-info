@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+    <span class="spacer">スプラトゥーン3</span>
+    <ng-container *ngFor="let type of types">
+        <button mat-icon-button class="example-icon" (click)="stateChange(type)">
+            <img src="../../../../assets/images/spl3/{{type}}.png"/>
+        </button>
+    </ng-container>
+</mat-toolbar>

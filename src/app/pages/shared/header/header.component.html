@@ -1,0 +1,7 @@
+<mat-toolbar *ngIf="this.dataService.selectedVersion" color="{{this.dataService.color}}">
+    <ng-container *ngFor="let type of types">
+        <button mat-icon-button class="example-icon" (click)="stateChange(type)">
+            <img src="../../../../assets/images/{{this.dataService.selectedVersion}}/{{type}}.webp"/>
+        </button>
+    </ng-container>
+</mat-toolbar>

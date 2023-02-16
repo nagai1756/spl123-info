@@ -1,0 +1,22 @@
+<app-spl3-header></app-spl3-header>
+<h1>{{this.dataService.selectedType}}</h1>
+<table border="3">
+    <tr>
+        <td>No.</td>
+        <td>メインウェポン</td>
+        <td>ブキ種</td>
+        <td>サブウェポン</td>
+        <td>スペシャルウェポン</td>
+        <td>必要ポイント</td>
+    </tr>
+    <ng-container *ngFor="let weapon of weapons;let i=index">
+        <tr *ngIf="this.dataService.selectedType==weapon['type']||this.dataService.selectedType== '全て'">
+            <td>{{i+1}}</td>
+            <td>{{weapon['name']}}</td>
+            <td>{{weapon['type']}}</td>
+            <td>{{weapon['subName']}}</td>
+            <td>{{weapon['specialName']}}</td>
+            <td style="text-align: center;">{{weapon['specialPoint']}}</td>
+        </tr>
+    </ng-container>
+</table>
